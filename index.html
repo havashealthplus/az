@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no">
+	  <title>Havas Health &amp; You</title>
+	  <meta name="author" content="tylerplz"/>
+	  <!-- styles -->
+	  <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+	  <!-- favicon -->
+    <link rel="icon" href="media/favicon.png" type="image/x-icon">
+    <script src="scripts/modernizr.custom.js"></script>
+  </head>
+  <body>
+  	<section class="panel" id="one">
+  	  <div class="container">
+  	  	<div class="text">
+          <h1>Let's meet.</h1>
+          <div id="trigger-overlay" type="button" onclick="playVid('vid2')">
+            <img src="media/arrow-dark.png" width="85px">
+          </div>
+		      <div class="overlay overlay-scale">
+            <div type="button" class="overlay-close" onclick="pauseVid('vid2')">
+              <img src="media/close.png" width="35px">
+            </div>
+            <video width="85%" max-height="85%" id="vid2" controls>
+              <source src="media/feature-video.mp4" type="video/mp4">
+              <source src="media/feature-video.webm" type="video/webm">
+              <source src="media/feature-video.ogv" type="video/ogg">
+            </video>
+          </div>
+  	  	</div>
+        <div class="bottom">
+          <div class="left">
+            <img src="media/az-logo.png" width="150px">
+          </div>
+          <div class="right">
+            <img src="media/havas-logo.png" width="150px">
+          </div>
+        </div>
+  	  </div>
+  	</section>
+
+  	<!-- scripts -->
+    <script src="scripts/jquery-3.2.0.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+      document.body.addEventListener('touchstart',function(){},false);
+    </script>
+    <script> 
+      function playVid(x) {
+        var vid = document.getElementById(x);
+        vid.play();
+      }
+      function pauseVid(x) {
+        var vid = document.getElementById(x);
+        vid.pause();
+      }
+    </script>
+  </body>
+</html>

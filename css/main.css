@@ -1,0 +1,216 @@
+/* all the styles r belong to tylerplz */
+/* general styles */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Helvetica", sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+p, span, a {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+.text h1 {
+  margin-top: 7.5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: -.15rem;
+  font-weight: bold;
+}
+
+.panel {
+  min-height: calc(100vh - 6.5rem);
+  height: 100%; /* prevents text from getting cut off */
+  background-color: #333;
+  color: #000000;
+}
+
+.bottom {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 1.5rem;
+}
+
+.left {
+  float: left;
+  margin-left: 1.5rem;
+}
+
+.right {
+  float: right;
+  margin-right: 1rem;
+}
+
+@media(max-width: 767px) {
+  .panel {
+    min-height: calc(100vh - 2rem);
+  	border: 15px solid #fff;
+  }
+}
+
+@media(min-width: 768px) {
+  .panel {
+    min-height: calc(100vh - 6.5rem);
+  	border: 50px solid #fff;
+  }
+  .bottom {
+    bottom: 0.3rem;
+  }
+  .left {
+    float: left;
+    margin-left: 3rem;
+  }
+  .right {
+    float: right;
+    margin-right: 2.5rem;
+  }
+}
+
+
+
+
+/* full screen panel backgrounds */
+#one {
+  background: url(../media/background.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* video overlay styling */
+#trigger-overlay img {
+  display: block;
+  text-align: center;
+  margin: 25px auto;
+}
+
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* Effects */
+.overlay-scale {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.overlay-scale.open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);  
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 15px rgba(0,0,0,0.75);
+}
+
+/* video overlay styling */
+#one-trigger-overlay img {
+  display: block;
+  text-align: center;
+  margin: 25px auto;
+}
+
+/* Overlay style */
+.one-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+/* Overlay closing cross */
+.one-overlay .one-overlay-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* Effects */
+.one-overlay-scale {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.one-overlay-scale.open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);  
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+#trigger-overlay {
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
